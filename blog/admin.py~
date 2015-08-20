@@ -8,4 +8,4 @@ class PostAdmin(MarkdownModelAdmin):
 	prepopulated_fields = {"slug":("title",)}
 
 admin.site.register(models.Post, PostAdmin)
-admin.site.register(models.Tag)
+

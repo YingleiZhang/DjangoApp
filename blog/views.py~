@@ -10,4 +10,4 @@ class BlogIndex(generic.ListView):
 
 class BlogDetail(generic.DetailView):
 	model = models.Post
-	template_name = "blog/post.html"
+	template_name = "post.html"
