@@ -20,6 +20,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^polls/', include('polls.urls',namespace="polls")),
     url(r'^markdown/', include('django_markdown.urls')),
-    url(r'^', include('blog.urls')),
+    url(r'^blog/', include('blog.urls', namespace="blog")),
 ]
 

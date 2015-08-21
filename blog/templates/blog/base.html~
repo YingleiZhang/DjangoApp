@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static "icons/favicon.ico" %}">
-    <link href="blog/feed/" rel="alternate" type="application/rss+xml" title="Yinglei's Blog Feed" />
+    <link href="/feed/" rel="alternate" type="application/rss+xml" title="Yinglei's Blog Feed" />
     <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
@@ -29,9 +29,10 @@
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="{% url "blog:index" %}">Home</a>
+          <a class="blog-nav-item active" href="{% url "index" %}">Home</a>
           <a class="blog-nav-item" href="#">New features</a>
           <a class="blog-nav-item" href="#">Press</a>
+          <a class="blog-nav-item" href="#">New hires</a>
           <a class="blog-nav-item" href="#">About</a>
         </nav>
       </div>

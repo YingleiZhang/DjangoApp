@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static "icons/favicon.ico" %}">
-    <link href="blog/feed/" rel="alternate" type="application/rss+xml" title="Yinglei's Blog Feed" />
+    <link href="/feed/" rel="alternate" type="application/rss+xml" title="Yinglei's Blog Feed" />
     <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->

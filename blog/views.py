@@ -5,9 +5,9 @@ from . import models
 # Create your views here.
 class BlogIndex(generic.ListView):
 	queryset = models.Post.objects.published()
-	template_name = "home.html"
+	template_name = "blog/home.html"
 	paginate_by = 2
 
 class BlogDetail(generic.DetailView):
 	model = models.Post
-	template_name = "post.html"
+	template_name = "blog/post.html"
