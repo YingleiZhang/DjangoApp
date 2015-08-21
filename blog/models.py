@@ -2,15 +2,17 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 # Create your models here.
-class PostQuerySet(models.QuerySet):
-	def published(self):
-		return self.filter(publish=True)
-
 class Tag(models.Model):
 	slug = models.SlugField(max_length=255, unique=True)
 
 	def __str__(self):
 		return self.slug
+
+
+class PostQuerySet(models.QuerySet):
+	def published(self):
+		return self.filter(publish=True)
+
 
 class Post(models.Model):
 	title = models.CharField(max_length=255)
@@ -27,7 +29,7 @@ class Post(models.Model):
 		return self.title
 	
 	def get_absolute_url(self):
-		return reverse("post_detail", kwargs={"slug":self.slug})
+		return reverse("post_detail", kwargs={"slug": self.slug})
 
 	class Meta:
 		verbose_name = "Blog Post"
