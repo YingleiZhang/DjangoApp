@@ -1,15 +1,15 @@
-<!--{% extends "blog/base.html"%}-->
+{# extends "blog/base.html" #}
 {% load django_markdown %}
-
+		
 {% block blog_posts %}
+<head><a href="/feed/" rel="alternate" type="application/rss+xml" title="Yinglei's latest posts"></head>
 {% for object in object_list %}
-<div class = "post" >
-  <h2><a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a></h2>
-  <p class="meta">
-  	{{ object.created }}|
-  	Tagged under {{ object.tags.all|join:", "}}
-  </p>
-  {{ object.body|markdown }}
-</div>
+  <div class = "post" >
+  	 <h2><a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a></h2>
+  	 <p class="meta">
+  	{{ object.created }}|Tagged under {{ object.tags.all|join:", "}}
+  	 </p>
+  	{{ object.body|markdown }}
+  </div>
 {% endfor %}
 {% endblock %}
