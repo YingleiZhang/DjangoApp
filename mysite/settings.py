@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django_markdown',
     'polls',
     'blog',
+    'todo',
 )
 
 MIDDLEWARE_CLASSES = (
