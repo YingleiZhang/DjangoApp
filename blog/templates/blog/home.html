@@ -1,19 +1,18 @@
-{# extends "blog/base.html" #}
+{% extends "blog/base.html" %}
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}" />
 
-{% load django_markdown %}
-		
+{% load django_markdown %}		
 {% block blog_posts %}
-{% for object in object_list %}
-  <div class = "post" >
-  	<h2>
-  	 <a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a>
-	</h2>
-  	 <p class="meta">
-  	{{ object.created }}|Tagged under {{ object.tags.all|join:", "}}
-  	 </p>
-  	{{ object.body|markdown }}
-  </div>
-{% endfor %}
+	{% for object in object_list %}
+		<div class = "post" >
+			<h2>
+				<a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a>
+			</h2>
+		<p class="meta">
+			{{ object.created }}|Tagged under {{ object.tags.all|join:", "}}
+		</p>
+			{{ object.body|markdown }}
+		</div>
+	{% endfor %}
 {% endblock %}

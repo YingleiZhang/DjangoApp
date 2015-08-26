@@ -13,9 +13,3 @@ class BlogPostTest(TestCase):
 		post.save()
 		self.assertEqual(Post.objects.published().count(), 1)
 
-class BlogViewTests(TestCase):
-	def test_feed_url(self):
-		response = self.client.get('/feed/')
-		print(response['Content-Type'])
-		self.assertIn('xml', response['Content-Type'])	
-

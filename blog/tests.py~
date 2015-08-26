@@ -16,5 +16,6 @@ class BlogPostTest(TestCase):
 class BlogViewTests(TestCase):
 	def test_feed_url(self):
 		response = self.client.get('/feed/')
+		print(response['Content-Type'])
 		self.assertIn('xml', response['Content-Type'])	
 
