@@ -1,6 +1,8 @@
 {# extends "blog/base.html" #}
-{% load django_markdown %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}" />
 
+{% load django_markdown %}
 {% block blog_posts %}
 <div class = "post" >
   <h2><a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a></h2>

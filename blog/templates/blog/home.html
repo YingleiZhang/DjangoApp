@@ -1,4 +1,7 @@
 {# extends "blog/base.html" #}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}" />
+
 {% load django_markdown %}
 		
 {% block blog_posts %}
