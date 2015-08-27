@@ -4,7 +4,7 @@
 {% load django_markdown %}
 {% block blog_posts %}
 <div class = "post" >
-  <h3><a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a></h3>
+  <h4><a href="{% url "blog:post_detail" slug=object.slug %}">{{ object.title }}</a></h4>
   <p class="meta">
   	{{ object.created }}|
   	Tagged under {{ object.tags.all|join:", "}}

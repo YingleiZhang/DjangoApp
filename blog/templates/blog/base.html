@@ -2,51 +2,53 @@
 {% load bootstrap3 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
-
-<head class="navbar navbar-inverse navbar-fixed-top">
-	<div class="container">
-		<ul class="nav navbar-nav">
-             		 <li><a href="#" class="btn-primary">Latest Posts</a></li>
-            		 <li><a href="#" class="btn-primary">Full List</a></li>
-            		 <li><a href="#" class="btn-primary">Projects</a></li>
-            		 <li><a href="#" class="btn-primary">Resume</a></li>
-	    		 <li><a href="#" class="btn-primary">About</a></li>
-            	</ul>
-	</div>
-</head>
+<!DOCTYPE html>
+<html lang="en-US">
 <body>
-      <div class="container">
-        <div class="col-md-9" >
-     
-            <div class="row">
-                <p>{% block blog_posts %}{% endblock %}</p>
-		<p>The image is shown below!</p>
-                <img src="http://placehold.it/400x240&text=[img]"/>
-            </div>     
-         <hr/>
-     
-        </div>
-     
-        <aside class="col-md-3">
-     
-          <h4>Quick Links</h4>
-          <ul class="side-nav">
-            <li><a href="https://docs.djangoproject.com/en/1.8/">Django Documentation</a></li>
-	    <li><a href="https://docs.python.org/3/">Python Documentation</a></li>
-            <li><a href="http://www.w3schools.com/html/default.asp">HTML, CSS and Javascript</a></li>
-	    <li><a href="http://guides.rubyonrails.org/getting_started.html">Rails Guide</a></li>
-            <li><a href="#">System Design</a></li>
-          </ul>
-     
-          <div class="panel">
-            <h4>Advertisement</h4>
-            <p>coming soon</p>
-	    <a href="#">Read More →</a>
-          </div>
-     
-        </aside>
-		
-      </div>    
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<ul class="nav navbar-nav">
+				<li><a href="#" class="btn">Latest Posts</a></li>
+				<li><a href="#" class="btn">Full List</a></li>
+				<li><a href="#" class="btn">Projects</a></li>
+				<li><a href="#" class="btn">Resume</a></li>
+				<li><a href="#" class="btn">About</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<hr>
+<hr>
+<body>
+  <div class="container">
+	<div class="col-md-9" >
+		<div class="row">
+			<p>{% block blog_posts %}{% endblock %}</p>
+			<p>The image is shown below!</p>
+			<img src="http://placehold.it/400x240&text=[img]"/>
+		</div> 
+	</div>
+ 
+	<aside class="container">
+	
+		<h4>Quick Links</h4>
+		<ul class="side-nav">
+			<li><a href="https://docs.djangoproject.com/en/1.8/" target="_blank">Django Documentation</a></li>
+			<li><a href="https://docs.python.org/3/" target="_blank">Python Documentation</a></li>
+			<li><a href="http://www.w3schools.com/html/default.asp" target="_blank">HTML, CSS and Javascript</a></li>
+			<li><a href="http://guides.rubyonrails.org/getting_started.html" target="_blank">Rails Guide</a></li>
+			<li><a href="#" target="_blank">System Design</a></li>
+		</ul>
+
+		<div class="panel">
+		<h4>Advertisement</h4>
+		<p>coming soon</p>
+		<a href="#">Read More →</a>
+		</div>
+ 
+	</aside>
+	
+  </div>    
 </body>  
       
 <footer class="navbar navbar-fixed-bottom">
@@ -54,4 +56,5 @@
 	<p>© Copyright Yinglei Zhang</p>
 	</div>
 </footer>
+</html>
     
