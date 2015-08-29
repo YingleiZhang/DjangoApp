@@ -38,6 +38,6 @@ class Post(models.Model):
 
 class Comment(models.Model):
 	text = models.CharField(max_length=200)
-	post = ForeignKey(Post)
+	post = models.ForeignKey(Post)
 	
 
