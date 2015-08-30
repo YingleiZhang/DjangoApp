@@ -9,9 +9,9 @@
     {% else %}
       {% if field.name != "name" and field.name != "email" and field.name != "url" %}
       <p 
-	{% if field.errors %}{{ field.errors }}{% endif %}
-	{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %} >
-	{{ field }}
+		{% if field.errors %}{{ field.errors }}{% endif %}
+		{% ifequal field.name "honeypot" %} style="display:none;"{% endifequal %} >
+		{{ field }}
       </p>
       {% endif %}
       <!--
