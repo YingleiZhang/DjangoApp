@@ -36,8 +36,5 @@ class Post(models.Model):
 		verbose_name_plural = "Blog Posts"
 		ordering = ["-created"]
 
-class Comment(models.Model):
-	text = models.CharField(max_length=200)
-	post = models.ForeignKey(Post)
 	
 

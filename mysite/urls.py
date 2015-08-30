@@ -18,6 +18,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('blog.urls')),
+	url('', include('django.contrib.auth.urls', namespace='auth')),
+	url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^polls/', include('polls.urls',namespace="polls")),
     url(r'^markdown/', include('django_markdown.urls')),
