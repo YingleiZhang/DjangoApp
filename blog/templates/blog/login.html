@@ -6,7 +6,7 @@
 
  <p>
    <ul class="nav nav-pills nav-stacked" align="center">
-   {% if useruser.is_authenticated %}
+   {% if user.is_authenticated %}
      <li>
        <a>Hello {{ user.get_full_name|default:user.username }}!</a>
      </li>
