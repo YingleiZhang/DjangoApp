@@ -1,11 +1,11 @@
 {% extends 'blog/login_base.html' %}
 
 {% block main %}
- <div>
+ <div align="center">
  <h1>Login to comment!</h1>
 
  <p>
-   <ul>
+   <ul class="nav nav-pills nav-stacked" align="center">
    {% if useruser.is_authenticated %}
      <li>
        <a>Hello {{ user.get_full_name|default:user.username }}!</a>
@@ -15,13 +15,13 @@
      </li>
    {% else %}
      <li>
-       <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
+       <a class="active" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
      </li>
      <li>
-       <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
+       <a class="active" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
      </li>
      <li>
-       <a href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>
+       <a class="active" href="{% url 'social:begin' 'twitter' %}?next={{ request.path }}">Login with Twitter</a>
      </li>
    {% endif %}
    </ul>

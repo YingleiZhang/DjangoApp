@@ -8,6 +8,12 @@ def login(request):
 	context = RequestContext(request,{'request': request,'user': request.user})
 	return render_to_response('blog/login.html',
                              context_instance=context)
+							 
+""" 
+#will need to implement the generic view for this page.
+class BlogLogin(generic.DetailView):
+	template_name='blog/login.html'
+"""	
 
 class BlogFeed(generic.ListView):
 	queryset = models.Post.objects.published()[:5]

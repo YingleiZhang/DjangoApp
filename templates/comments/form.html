@@ -1,4 +1,7 @@
 {% load comments i18n %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 {% if user.is_authenticated %}
 <form action="{% comment_form_target %}" method="post">{% csrf_token %}
   {% if next %}
