@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'disqus',
     'bootstrap3',
     'django_markdown',
     'social.apps.django_app.default',
@@ -45,7 +47,9 @@ INSTALLED_APPS = (
     'todo',
 )
 
-
+SITE_ID =1
+DISQUS_API_KEY = 'aKbwsvjutoXw7AxsoNii726yspi1vGqZI7xOIC4KgaRKEcZTgXaJF5bZs6zadiIi'
+DISQUS_WEBSITE_SHORTNAME = '6OPapIckmb1ZdSQagvPAJr6dxeNHi8bfxnmwkYxdQgQrJldkZRsYzDs4m2KnMypM'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

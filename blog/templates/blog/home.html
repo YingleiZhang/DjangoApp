@@ -1,5 +1,6 @@
 {% extends "blog/base.html" %}
 {% load staticfiles %}
+{% load disqus_tags %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}" />
 
 {% load django_markdown %}		
@@ -12,5 +13,7 @@
 		</p>
 			{{ object.body|markdown }}
 		</div>
+		<a href="{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.id }}">View Comments</a>
+		{% disqus_num_replies %}
 	{% endfor %}
 {% endblock %}

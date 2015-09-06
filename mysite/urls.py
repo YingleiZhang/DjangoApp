@@ -24,6 +24,5 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls',namespace="polls")),
     url(r'^markdown/', include('django_markdown.urls')),
     url(r'^blog/', include('blog.urls', namespace="blog")),
-    url(r'^comments/', include('django_comments.urls')),
 ]
 
